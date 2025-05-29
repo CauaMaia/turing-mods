@@ -2,7 +2,7 @@
 
 Este repositório apresenta **implementações modificadas da Máquina de Turing** desenvolvidas como parte da **AV2 (Atividade Avaliativa de Segundo Bimestre)** nas disciplinas de **Linguagens Formais e Autômatos** e **Teoria da Computação**, do curso de Ciência da Computação – CESUPA.
 
-## 🧾 Tema do trabalho
+## 📾 Tema do trabalho
 
 **Tema 5: Outras modificações sobre a Máquina de Turing**
 
@@ -21,13 +21,23 @@ Este repositório apresenta **implementações modificadas da Máquina de Turing
 
 ## 🔬 Exemplos incluídos
 
-Cada implementação vem com **diversos testes** que ilustram aplicações práticas e teóricas:
+Cada implementação vem com **exemplos que ilustram aplicações reais** com mais de 8 estados, evitando construções triviais:
 
-* Inversão de bits
-* Rotação de strings
-* Contador binário com overflow (circular)
-* Substituição seletiva com saltos
-* Validação de padrão com acessos alternados
+### `JumpingHeadTM`
+
+* **Verifica se a cadeia binária possui quantidade par de `1`s** (controle com saltos)
+* **Reconhece cadeias com padrão intercalado `a_b_a_b_...`** (marca pares alternados)
+* Exemplo aceito: `a_b_a_b_` → `X_Y_X_Y_`
+* Exemplo rejeitado: `a_b_b_`, `a_a_b_`, `a_b_a_`
+
+### `CircularTapeTM`
+
+* **Verificação de palíndromo binário com marcador**
+* **Reconhecimento de padrão binário simétrico**
+* Exemplo aceito: `#0110#` → `#XYYX#`
+* Exemplo rejeitado: `#0101#`, `#1101#`
+
+Cada máquina foi projetada com clareza e transições bem estruturadas, evitando gambiarras ou repetições artificiais para forçar a quantidade de estados.
 
 ---
 
@@ -42,7 +52,7 @@ Cada implementação vem com **diversos testes** que ilustram aplicações prát
 
 ---
 
-## 👨‍💻 Autores
+## 👨‍💼 Autores
 
 **Cauã Maia**
 **Giovanni Braga**
